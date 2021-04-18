@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.delishdemo2.main.MainFragment"
+        android:label="Main">
+        <action
+            android:id="@+id/goToRecipesDetails"
+            app:destination="@+id/messageDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messageDetailsFragment"
+        android:name="com.example.delishdemo2.message.MessageDetailsFragment"
+        android:label="MessageDetails">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
